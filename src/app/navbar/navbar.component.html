@@ -1,0 +1,56 @@
+<nav class="navbar">
+
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="assets/Sitar and book logo design.png" alt="Sharda Publication">
+    </div>
+
+    <!-- Menu -->
+    <ul class="menu" [class.active]="menuOpen">
+      <li><a routerLink="/" (click)=toggleMenu()>Home</a></li>
+      <li><a routerLink="/journals" (click)=toggleMenu()>JOURNALS</a></li>
+      <li><a routerLink="/ojs-services" (click)=toggleMenu()>OJS SERVICES</a></li>
+      <li><a routerLink="/ph-support" (click)=toggleMenu()>PHD SUPPORT</a></li>
+      <li><a routerLink="/resouces" (click)=toggleMenu()>RESOURCES</a></li>
+      <li><a routerLink="/conference" (click)=toggleMenu()>CONFERENCE</a></li>
+      
+      
+    </ul>
+
+    <!-- Hamburger -->
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+  <!-- Top Contact Bar -->
+<div class="contact-bar">
+
+  <div class="left-section">
+    <button class="contact-btn" (click)="goToContact()">Contact Us</button>
+  </div>
+
+  <div class="right-section">
+
+    <span class="icon" (click)="sendEmail()">
+      <i class="fa fa-envelope"></i>
+    </span>
+
+    <span class="icon" (click)="makeCall()">
+      <i class="fa fa-phone"></i>
+    </span>
+
+  </div>
+
+</div>
+
+<!-- Existing Navbar -->
+<nav class="navbar">
+  <!-- your existing navbar code -->
+</nav>
+
+</nav>

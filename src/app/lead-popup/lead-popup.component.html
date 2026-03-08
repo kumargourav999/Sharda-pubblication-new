@@ -1,0 +1,25 @@
+<div class="overlay" *ngIf="showPopup">
+
+  <div class="popup">
+
+    <h2>Get in Touch</h2>
+
+    <form (ngSubmit)="submitForm()">
+
+      <input type="text" placeholder="Your Name" [(ngModel)]="form.name" name="name" required>
+
+      <input type="email" placeholder="Email Address" [(ngModel)]="form.email" name="email" required>
+
+      <input type="text" placeholder="Mobile Number" [(ngModel)]="form.mobile" name="mobile" required>
+
+      <textarea placeholder="Message" [(ngModel)]="form.message" name="message"></textarea>
+
+      <button type="submit">Submit</button>
+
+      <span class="close" (click)="closePopup()">✖</span>
+
+    </form>
+
+  </div>
+
+</div>
