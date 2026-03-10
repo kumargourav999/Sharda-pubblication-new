@@ -1,0 +1,117 @@
+<div class="dashboard">
+
+  <h2>Admin Dashboard</h2>
+
+  <!-- Add Journal Button -->
+  <button class="add-btn" (click)="toggleForm()">Add Journal</button>
+
+  <!-- Journal Form -->
+ <div class="journal-form" *ngIf="showForm">
+
+<div class="form-grid">
+
+<input type="text" placeholder="Journal Name"
+[(ngModel)]="journal.name" name="name">
+
+<input type="text" placeholder="E-ISSN"
+[(ngModel)]="journal.eIssn" name="eIssn">
+
+<input type="text" placeholder="P-ISSN"
+[(ngModel)]="journal.pIssn" name="pIssn">
+
+<input type="text" placeholder="Chief Editor Name"
+[(ngModel)]="journal.chiefEditorName" name="chiefEditorName">
+
+<input type="text" placeholder="Chief Editor Affiliation"
+[(ngModel)]="journal.chiefEditorAffiliation" name="chiefEditorAffiliation">
+
+<input type="text" placeholder="Publisher"
+[(ngModel)]="journal.publisher" name="publisher">
+
+<input type="text" placeholder="Publication Frequency"
+[(ngModel)]="journal.publicationFrequency" name="publicationFrequency">
+
+<input type="text" placeholder="Indexing Name"
+[(ngModel)]="journal.indexingName" name="indexingName">
+
+<input type="text" placeholder="Sub Indexing"
+[(ngModel)]="journal.subIndexing" name="subIndexing">
+
+<input type="text" placeholder="Metric Name"
+[(ngModel)]="journal.metricName" name="metricName">
+
+<input type="text" placeholder="Metric Value"
+[(ngModel)]="journal.metricValue" name="metricValue">
+
+</div>
+
+<button class="save-btn" (click)="addJournal()">Save Journal</button>
+
+</div>
+
+  <!-- Journal List -->
+  <div class="journal-list">
+
+<h3>Added Journals</h3>
+
+<div *ngFor="let j of journals; let i = index" class="journal-card">
+
+<!-- Top Summary -->
+<div class="journal-summary" (click)="toggleDetails(i)">
+<div class="summary-right">
+
+<a class="edit-btn"
+(click)="editJournal(j); $event.stopPropagation()">
+
+<i class="fa fa-edit"></i>
+
+</a>
+
+<a style="margin-left: 8px; color:red" class="delete-btn"
+(click)="deleteJournal(j._id); $event.stopPropagation()">
+
+<i class="fa fa-trash"></i>
+
+</a>
+
+</div>
+<div class="summary-left">
+<h4>{{j.name}}</h4>
+<p>E-ISSN: {{j.eIssn}}</p>
+<p>P-ISSN: {{j.pIssn}}</p>
+
+</div>
+
+<div class="summary-right">
+<span>{{selectedIndex === i ? '-' : '+'}}</span>
+</div>
+
+</div>
+
+<!-- Hidden Details -->
+
+<div class="journal-details" *ngIf="selectedIndex === i">
+
+<p><b>Chief Editor:</b> {{j.chiefEditorName}}</p>
+
+<p><b>Chief Editor Affiliation:</b> {{j.chiefEditorAffiliation}}</p>
+
+<p><b>Publisher:</b> {{j.publisher}}</p>
+
+<p><b>Publication Frequency:</b> {{j.publicationFrequency}}</p>
+
+<p><b>Indexing:</b> {{j.indexingName}}</p>
+
+<p><b>Sub Indexing:</b> {{j.subIndexing}}</p>
+
+<p><b>Metric Name:</b> {{j.metricName}}</p>
+
+<p><b>Metric Value:</b> {{j.metricValue}}</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>

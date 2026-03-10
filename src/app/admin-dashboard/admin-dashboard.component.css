@@ -1,0 +1,169 @@
+.dashboard{
+
+  margin:40px auto;
+}
+
+.add-btn{
+  background:#3a7bfd;
+  color:white;
+  padding:10px 20px;
+  border:none;
+  cursor:pointer;
+}
+
+.journal-form{
+  margin-top:20px;
+  padding:20px;
+  border:1px solid #ddd;
+}
+
+input{
+  width:93%;
+  padding:10px;
+  margin:10px 0;
+}
+
+.journal-list{
+  margin-top:30px;
+}
+
+.journal-card{
+  border:1px solid #ddd;
+  padding:15px;
+  margin-top:10px;
+}
+.dashboard{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.add-btn{
+background:#3a7bfd;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+margin-bottom:20px;
+}
+
+.journal-form{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* GRID LAYOUT */
+
+.form-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+/* INPUT */
+
+input{
+width:93%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+/* SAVE BUTTON */
+
+.save-btn{
+margin-top:20px;
+background:#28a745;
+color:white;
+border:none;
+padding:12px 20px;
+cursor:pointer;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.dashboard{
+padding:10px;
+}
+
+.add-btn{
+width:100%;
+}
+
+.save-btn{
+width:100%;
+}
+
+}
+.journal-list{
+margin-top:30px;
+}
+
+.journal-card{
+border:1px solid #ddd;
+border-radius:6px;
+margin-bottom:15px;
+background:white;
+overflow:hidden;
+}
+
+/* Summary */
+
+.journal-summary{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+cursor:pointer;
+background:#f9f9f9;
+}
+
+.journal-summary h4{
+margin:0;
+color:#3a7bfd;
+}
+
+.summary-left p{
+margin:2px 0;
+font-size:14px;
+}
+
+.summary-right span{
+font-size:22px;
+font-weight:bold;
+}
+
+/* Hidden Details */
+
+.journal-details{
+padding:15px;
+border-top:1px solid #eee;
+}
+
+.journal-details p{
+margin:6px 0;
+font-size:14px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.journal-summary{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.summary-right{
+align-self:flex-end;
+}
+
+}

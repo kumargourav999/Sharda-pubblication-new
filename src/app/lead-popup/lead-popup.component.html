@@ -2,7 +2,10 @@
 
   <div class="popup">
 
+    <span class="close-btn" (click)="closePopup()">✖</span>
+
     <h2>Get in Touch</h2>
+    <p class="subtitle">We will contact you shortly</p>
 
     <form (ngSubmit)="submitForm()">
 
@@ -12,11 +15,9 @@
 
       <input type="text" placeholder="Mobile Number" [(ngModel)]="form.mobile" name="mobile" required>
 
-      <textarea placeholder="Message" [(ngModel)]="form.message" name="message"></textarea>
+      <textarea placeholder="Your Message" rows="3" [(ngModel)]="form.message" name="message"></textarea>
 
       <button type="submit">Submit</button>
-
-      <span class="close" (click)="closePopup()">✖</span>
 
     </form>
 

@@ -15,27 +15,28 @@ export class LeadPopupComponent implements OnInit {
     message: ''
   };
 
-  ngOnInit() {
 
-    const visited = false;
-
-    if (visited) {
-      this.showPopup = false;
-    }
-
-  }
 
   submitForm() {
 
-    console.log(this.form);
-
-    localStorage.setItem('popupShown', 'true');
+    
 
     this.showPopup = false;
   }
 
-  closePopup(){
-    this.showPopup = false;
-  }
+
+
+
+ngOnInit() {
+
+setTimeout(() => {
+  this.showPopup = true;
+}, 2000);
+
+}
+
+closePopup(){
+this.showPopup = false;
+}
 
 }

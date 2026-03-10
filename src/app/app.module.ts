@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { JournalsComponent } from './journals/journals.component';
 import { LeadPopupComponent } from './lead-popup/lead-popup.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component'
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomeComponent,
     JournalsComponent,
     LeadPopupComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminLoginComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
