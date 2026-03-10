@@ -12,7 +12,8 @@ email='';
 password='';
 
 constructor(private http:HttpClient,private router:Router){}
-
+    baseUrl="https://sharda-pubblication-new.onrender.com/api/admin/login"
+    //baseUrl=http://localhost:5000/api/admin/login'
 // login(){
 
 // this.http.post<any>('http://localhost:5000/api/admin/login',{
@@ -35,7 +36,7 @@ constructor(private http:HttpClient,private router:Router){}
 // }
 login(){
 
-this.http.post<any>('http://localhost:5000/api/admin/login',{
+this.http.post<any>(this.baseUrl,{
   email:this.email,
   password:this.password
 })
