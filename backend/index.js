@@ -4,7 +4,8 @@ const mongoose=require("mongoose");
 const adminRoutes=require(".//admin/controller/loginController");
 const journalRoutes = require(".//admin/controller/journalController");
 
-
+const createAdmin=require("./admin")
+createAdmin();
 const app=express();
 app.use(cors());
 app.use(express.json());
