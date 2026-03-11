@@ -10,7 +10,8 @@ app.use(cors());
 app.use(express.json());
 //mongoose.connect("mongodb://localhost:27017/shardaPublication");
 app.use(cors());
-mongoose.connect("mongodb+srv://kumargourav:kumar123@cluster0.dxvytbg.mongodb.net/shreeShyamSteel?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://kumar86gourav_db_user:9dN!Q0123@cluster0.5jcfhkj.mongodb.net/sharda?retryWrites=true&w=majority?retryWrites=true&w=majority&appName=Cluster0")
+
 //mongodb+srv://kumargourav:kumar123@cluster0.dxvytbg.mongodb.net/shardaPublication?retryWrites=true&w=majority&appName=Cluster0
 app.use("/api/admin",adminRoutes);
 app.use("/api/journals", journalRoutes);
