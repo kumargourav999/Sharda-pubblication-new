@@ -21,4 +21,4 @@ async function createAdmin(){
  process.exit();
 }
 
-createAdmin();
+module.exports =createAdmin;
