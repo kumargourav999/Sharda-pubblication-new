@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const Admin = require("./admin/models/loginModel");
 
-mongoose.connect("mongodb://localhost:27017/shardaPublication")
+mongoose.connect("mongodb+srv://kumar86gourav_db_user:9dN!Q0123@cluster0.5jcfhkj.mongodb.net/sharda?retryWrites=true&w=majority&appName=Cluster0")
 .then(()=>console.log("MongoDB connected"));
 
 async function createAdmin(){
