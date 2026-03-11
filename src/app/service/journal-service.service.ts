@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class JournalServiceService {
 
-    baseUrl="https://sharda-pubblication-new-2.onrender.com/api"
+    baseUrl=" https://sharda-pubblication-new-final.onrender.com/api"
   // private baseUrl = "http://localhost:5000/api";
 
   constructor(private http: HttpClient) {}
