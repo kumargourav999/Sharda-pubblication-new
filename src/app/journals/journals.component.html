@@ -1,1 +1,53 @@
-<p>journals works!</p>
+<div class="journal-container">
+
+  <h2 class="title">Our Journals</h2>
+
+  <div 
+    class="journal-card" 
+    *ngFor="let journal of journals; let i=index"
+  >
+
+    <!-- HEADER -->
+    <div class="journal-header" (click)="toggleJournal(i)">
+
+      <div class="journal-basic">
+        <h3>{{journal.name}}</h3>
+
+        <div class="issn">
+          <span>E-ISSN : {{journal.eIssn}}</span>
+          <span>P-ISSN : {{journal.pIssn}}</span>
+        </div>
+      </div>
+
+      <i class="fa"
+        [ngClass]="selectedJournalIndex === i ? 'fa-chevron-up' : 'fa-chevron-down'">
+      </i>
+
+    </div>
+
+    <!-- DETAILS -->
+    <div 
+      class="journal-details"
+      *ngIf="selectedJournalIndex === i"
+    >
+    <p><strong>Chief Editor:</strong> {{journal.chiefEditorName}}</p>
+    <p><strong>Chief Editor Affiliation:</strong> {{journal.chiefEditorAffiliation}}</p>
+
+      <p><strong>Publisher::</strong> {{journal.publisher}}</p>
+
+      <p><strong>Publication Frequency:</strong> {{journal.frequency}}</p>
+
+      <p><strong>Indexing::</strong> {{journal.indexingName}}</p>
+
+      <p><strong>Sub Indexing:</strong> {{journal.subIndexing}}</p>
+
+       <p><strong>Metric Name:</strong> {{journal.metricName}}</p>
+
+        <p><strong>Metric Value:</strong> {{journal.metricValue}}</p>
+
+      
+    </div>
+
+  </div>
+
+</div>
