@@ -1,4 +1,4 @@
-import { Component ,OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lead-popup',
@@ -6,7 +6,8 @@ import { Component ,OnInit} from '@angular/core';
   styleUrls: ['./lead-popup.component.css']
 })
 export class LeadPopupComponent implements OnInit {
- showPopup = true;
+
+  showPopup = false;
 
   form = {
     name: '',
@@ -15,28 +16,33 @@ export class LeadPopupComponent implements OnInit {
     message: ''
   };
 
+  ngOnInit() {
 
+    const popupShown = localStorage.getItem('leadPopupShown');
+
+    if (!popupShown) {
+
+      setTimeout(() => {
+        this.showPopup = true;
+      }, 2000);
+
+    }
+
+  }
 
   submitForm() {
 
-    
+    // mark popup as shown
+    localStorage.setItem('leadPopupShown', 'true');
 
     this.showPopup = false;
   }
 
+  closePopup(){
 
+    localStorage.setItem('leadPopupShown', 'true');
 
-
-ngOnInit() {
-
-setTimeout(() => {
-  this.showPopup = true;
-}, 2000);
-
-}
-
-closePopup(){
-this.showPopup = false;
-}
+    this.showPopup = false;
+  }
 
 }
