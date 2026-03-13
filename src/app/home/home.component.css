@@ -6,10 +6,8 @@
   text-align:center;
   color:white;
 
-  background-image: url('/assets/pexels-pixabay-261705.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+ background-color:  #a1f0f0;
+ 
   position: relative;
 }
 
@@ -40,7 +38,7 @@
 
 .primary-btn{
   background:white;
-  color:#3a7bfd;
+  color:#74b3b3;
   border:none;
   padding:12px 28px;
   border-radius:25px;
