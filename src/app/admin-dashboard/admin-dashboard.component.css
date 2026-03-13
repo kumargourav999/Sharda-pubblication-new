@@ -4,7 +4,7 @@
 }
 
 .add-btn{
-  background:#3a7bfd;
+  background:#2f9898;
   color:white;
   padding:10px 20px;
   border:none;
@@ -39,7 +39,7 @@ padding:20px;
 }
 
 .add-btn{
-background:#3a7bfd;
+background:#2f9898;
 color:white;
 border:none;
 padding:10px 20px;
@@ -75,7 +75,7 @@ border-radius:4px;
 
 .save-btn{
 margin-top:20px;
-background:#28a745;
+background:#2f9898;
 color:white;
 border:none;
 padding:12px 20px;
@@ -108,7 +108,7 @@ margin-top:30px;
 }
 
 .journal-card{
-border:1px solid #ddd;
+border:1px solid whitesmoke;
 border-radius:6px;
 margin-bottom:15px;
 background:white;
