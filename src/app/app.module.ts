@@ -8,8 +8,10 @@ import { JournalsComponent } from './journals/journals.component';
 import { LeadPopupComponent } from './lead-popup/lead-popup.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
-import {HttpClientModule} from '@angular/common/http';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { LoaderInterceptor } from './loader.interceptor';
+import { GlobalLoaderComponent } from './global-loader/global-loader.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     LeadPopupComponent,
     NavbarComponent,
     AdminLoginComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    GlobalLoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,13 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

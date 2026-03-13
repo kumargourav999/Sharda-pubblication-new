@@ -1,0 +1,38 @@
+.loader-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,0.8);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.book-loader{
+  display:flex;
+}
+
+.book-loader div{
+  width:10px;
+  height:40px;
+  background:#2f9898;
+  margin:4px;
+  animation:flip 1s infinite;
+}
+
+.book-loader div:nth-child(2){
+  animation-delay:0.2s;
+}
+
+.book-loader div:nth-child(3){
+  animation-delay:0.4s;
+}
+
+@keyframes flip{
+  0%{transform:scaleY(1)}
+  50%{transform:scaleY(0.3)}
+  100%{transform:scaleY(1)}
+}
