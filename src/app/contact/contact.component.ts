@@ -21,6 +21,14 @@ submitQuery(){
   .subscribe(res=>{
 
     alert("Query submitted successfully");
+     this.contactForm = {
+      reason: '',
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    };
+
   }
 );
 

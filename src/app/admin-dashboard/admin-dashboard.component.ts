@@ -104,4 +104,5 @@ this.journalService.getJournals()
 });
 
 }
+
 }

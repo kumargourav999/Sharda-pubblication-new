@@ -11,6 +11,7 @@
   >
 
 </div>
+<h3 *ngIf="filteredJournals.length==0">No Journal Found...</h3>
   <div 
     class="journal-card" 
     *ngFor="let journal of filteredJournals; let i=index"

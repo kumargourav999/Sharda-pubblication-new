@@ -1,0 +1,35 @@
+<div class="query-container">
+
+<h2>Customer Queries</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Reason</th>
+<th>Message</th>
+<th>Date</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let q of queries">
+
+<td>{{q.name}}</td>
+<td>{{q.email}}</td>
+<td>{{q.phone}}</td>
+<td>{{q.reason}}</td>
+<td>{{q.message}}</td>
+<td>{{q.createdAt | date:'medium'}}</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>

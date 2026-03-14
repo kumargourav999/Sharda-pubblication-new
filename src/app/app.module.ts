@@ -14,6 +14,7 @@ import { LoaderInterceptor } from './loader.interceptor';
 import { GlobalLoaderComponent } from './global-loader/global-loader.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { CustomerQueryComponent } from './customer-query/customer-query.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ContactComponent } from './contact/contact.component';
     AdminDashboardComponent,
     GlobalLoaderComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    CustomerQueryComponent
   ],
   imports: [
     BrowserModule,
