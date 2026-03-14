@@ -1,0 +1,68 @@
+<div class="contact-container">
+
+  <h2>Contact Us</h2>
+  <p class="contact-desc">
+    Have questions about journals, article submission, or publication?
+    Send us your query and our team will respond shortly.
+  </p>
+
+  <form (ngSubmit)="submitQuery()" #contactFormRef="ngForm">
+
+    <!-- Reason -->
+    <div class="form-group">
+      <label>Reason to Contact</label>
+
+      <select name="reason"
+              [(ngModel)]="contactForm.reason"
+              required>
+
+        <option value="">Select Reason</option>
+        <option value="journal">Journal Inquiry</option>
+        <option value="submission">Article Submission</option>
+        <option value="publication">Publication Support</option>
+        <option value="other">Other</option>
+
+      </select>
+    </div>
+
+    <!-- Name -->
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text"
+             name="name"
+             [(ngModel)]="contactForm.name"
+             required>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email"
+             name="email"
+             [(ngModel)]="contactForm.email"
+             required>
+    </div>
+
+    <!-- Phone -->
+    <div class="form-group">
+      <label>Phone</label>
+      <input type="text"
+             name="phone"
+             [(ngModel)]="contactForm.phone">
+    </div>
+
+    <!-- Message -->
+    <div class="form-group">
+      <label>Message</label>
+      <textarea rows="4"
+                name="message"
+                [(ngModel)]="contactForm.message"
+                required>
+      </textarea>
+    </div>
+
+    <button type="submit">Submit Your Query</button>
+
+  </form>
+
+</div>
