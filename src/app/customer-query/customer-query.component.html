@@ -2,6 +2,9 @@
 
 <h2>Customer Queries</h2>
 
+<!-- Desktop Table -->
+<div class="desktop-table">
+
 <table>
 
 <thead>
@@ -18,18 +21,58 @@
 <tbody>
 
 <tr *ngFor="let q of queries">
-
 <td>{{q.name}}</td>
 <td>{{q.email}}</td>
 <td>{{q.phone}}</td>
 <td>{{q.reason}}</td>
 <td>{{q.message}}</td>
 <td>{{q.createdAt | date:'medium'}}</td>
-
 </tr>
 
 </tbody>
 
 </table>
+
+</div>
+
+<!-- Mobile Cards -->
+
+<div class="mobile-cards">
+
+<div class="query-card" *ngFor="let q of queries">
+
+<div class="card-row">
+<span>Name</span>
+<p>{{q.name}}</p>
+</div>
+
+<div class="card-row">
+<span>Email</span>
+<p>{{q.email}}</p>
+</div>
+
+<div class="card-row">
+<span>Phone</span>
+<p>{{q.phone}}</p>
+</div>
+
+<div class="card-row">
+<span>Reason</span>
+<p>{{q.reason}}</p>
+</div>
+
+<div class="card-row">
+<span>Message</span>
+<p>{{q.message}}</p>
+</div>
+
+<div class="card-row">
+<span>Date</span>
+<p>{{q.createdAt | date:'medium'}}</p>
+</div>
+
+</div>
+
+</div>
 
 </div>
