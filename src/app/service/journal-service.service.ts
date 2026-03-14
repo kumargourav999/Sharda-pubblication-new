@@ -38,4 +38,7 @@ export class JournalServiceService {
  return this.http.post(this.baseUrl+ "/customer/submitQuery",data);
 
 }
+  getCustomerQueries(){
+  return this.http.get(this.baseUrl + "/customer/getQueries");
+}
 }
