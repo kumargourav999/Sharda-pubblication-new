@@ -12,6 +12,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { LoaderInterceptor } from './loader.interceptor';
 import { GlobalLoaderComponent } from './global-loader/global-loader.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GlobalLoaderComponent } from './global-loader/global-loader.component';
     NavbarComponent,
     AdminLoginComponent,
     AdminDashboardComponent,
-    GlobalLoaderComponent
+    GlobalLoaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

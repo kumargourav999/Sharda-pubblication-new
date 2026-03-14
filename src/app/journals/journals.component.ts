@@ -1,13 +1,19 @@
 import { Component ,OnInit} from '@angular/core';
 import { JournalServiceService } from '../service/journal-service.service';
+
 @Component({
   selector: 'app-journals',
   templateUrl: './journals.component.html',
   styleUrls: ['./journals.component.css']
 })
 export class JournalsComponent implements OnInit{
-journals:any[] = [];
+
+  journals:any[] = [];
+  filteredJournals:any[] = [];
+
   selectedJournalIndex:number = -1;
+
+  searchText:string = '';
 
   constructor(private journalService:JournalServiceService){}
 
@@ -18,6 +24,7 @@ journals:any[] = [];
   getJournals(){
     this.journalService.getJournals().subscribe((res:any)=>{
       this.journals = res;
+      this.filteredJournals = res;
     });
   }
 
@@ -28,4 +35,13 @@ journals:any[] = [];
       this.selectedJournalIndex = index;
     }
   }
+
+  searchJournal(){
+
+    this.filteredJournals = this.journals.filter(journal =>
+      journal.name.toLowerCase().includes(this.searchText.toLowerCase())
+    );
+
+  }
+
 }

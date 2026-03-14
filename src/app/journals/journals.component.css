@@ -75,3 +75,22 @@ color: #2f9898;
         transform:translateY(0);
     }
 }
+.journal-search{
+  text-align:center;
+  margin:30px 0;
+}
+
+.journal-search input{
+  width:60%;
+  max-width:400px;
+  padding:10px 15px;
+  border-radius:25px;
+  border:1px solid #ccc;
+  outline:none;
+  font-size:14px;
+}
+
+.journal-search input:focus{
+  border-color:#2f9898;
+  box-shadow:0 0 5px rgba(47,152,152,0.4);
+}

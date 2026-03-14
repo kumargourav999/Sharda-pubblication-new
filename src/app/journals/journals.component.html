@@ -1,10 +1,19 @@
 <div class="journal-container">
 
   <h2 class="title">Our Journals</h2>
+  <div class="journal-search">
 
+  <input 
+    type="text"
+    placeholder="Search Journal..."
+    [(ngModel)]="searchText"
+    (input)="searchJournal()"
+  >
+
+</div>
   <div 
     class="journal-card" 
-    *ngFor="let journal of journals; let i=index"
+    *ngFor="let journal of filteredJournals; let i=index"
   >
 
     <!-- HEADER -->
