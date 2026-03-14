@@ -20,5 +20,6 @@ export class CustomerQueryComponent implements OnInit {
     this.service.getCustomerQueries().subscribe((res:any)=>{
       this.queries = res;
     });
-  }
+  
+}
 }

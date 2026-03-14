@@ -45,4 +45,4 @@ import { CustomerQueryComponent } from './customer-query/customer-query.componen
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

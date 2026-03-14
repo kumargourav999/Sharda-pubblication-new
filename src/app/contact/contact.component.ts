@@ -27,7 +27,7 @@ submitQuery(){
       email: '',
       phone: '',
       message: ''
-    };
+  };
 }
 );
 

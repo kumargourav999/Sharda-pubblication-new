@@ -18,4 +18,4 @@ describe('CustomerQueryComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-}) ;
+   }) ;

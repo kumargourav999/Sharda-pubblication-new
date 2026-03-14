@@ -11,8 +11,7 @@ const routes: Routes = [
      { path: 'journals', component: JournalsComponent },
      {path:'login', component: AdminLoginComponent},
       {path:'admindash', component: AdminDashboardComponent},
-      {
-        path:'contact',component:ContactComponent},
+      {path:'contact',component:ContactComponent},
       {path:'customerQuery',component:CustomerQueryComponent}
 ];
 
