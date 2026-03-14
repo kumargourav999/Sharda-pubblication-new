@@ -33,4 +33,12 @@ export class JournalServiceService {
  updateJournal(id:any,data:any):Observable<any>{
   return this.http.put(this.baseUrl+"/journals/updateJournal/"+id,data);
  }
+  submitQuery(data:any): Observable<any>{
+
+ return this.http.post(this.baseUrl+ "/customer/submitQuery",data);
+
+}
+  getCustomerQueries(){
+  return this.http.get(this.baseUrl + "/customer/getQueries");
+}
 }
