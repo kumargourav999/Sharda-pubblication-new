@@ -6,11 +6,12 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { ContactComponent } from './contact/contact.component';
 import { CustomerQueryComponent } from './customer-query/customer-query.component';
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   { path: '', component: HomeComponent },
      { path: 'journals', component: JournalsComponent },
      {path:'login', component: AdminLoginComponent},
-      {path:'admindash', component: AdminDashboardComponent},
+      {path:'admindash', component: AdminDashboardComponent,canActivate:[AuthGuard]},
       {path:'contact',component:ContactComponent},
       {path:'customerQuery',component:CustomerQueryComponent}
 ];

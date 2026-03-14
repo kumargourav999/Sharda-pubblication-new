@@ -46,6 +46,9 @@ this.http.post<any>(this.baseUrl,{
     console.log(res);
 
     alert("Login successful");
+   
+     localStorage.setItem("adminToken", res.token);
+
     this.router.navigate(["/admindash"])
   },
 
