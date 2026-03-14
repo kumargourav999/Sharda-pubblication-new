@@ -7,7 +7,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { ContactComponent } from './contact/contact.component';
 import { CustomerQueryComponent } from './customer-query/customer-query.component';
 import { AboutComponent } from './about/about.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard} from './auth.guard';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {path:'AboutUs',component:AboutComponent},

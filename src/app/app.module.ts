@@ -15,7 +15,7 @@ import { GlobalLoaderComponent } from './global-loader/global-loader.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { CustomerQueryComponent } from './customer-query/customer-query.component';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent} from './about/about.component';
 
 @NgModule({
   declarations: [
