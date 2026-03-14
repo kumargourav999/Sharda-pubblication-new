@@ -21,5 +21,4 @@ export class CustomerQueryComponent implements OnInit {
       this.queries = res;
     });
   }
-
 }

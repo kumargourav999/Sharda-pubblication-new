@@ -12,8 +12,7 @@ const routes: Routes = [
      {path:'login', component: AdminLoginComponent},
       {path:'admindash', component: AdminDashboardComponent},
       {
-        path:'contact',component:ContactComponent
-      },
+        path:'contact',component:ContactComponent},
       {path:'customerQuery',component:CustomerQueryComponent}
 ];
 

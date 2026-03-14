@@ -28,8 +28,7 @@ submitQuery(){
       phone: '',
       message: ''
     };
-
-  }
+}
 );
 
 
