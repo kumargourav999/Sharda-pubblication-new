@@ -1,0 +1,54 @@
+<div class="article-container">
+
+<h2>Submit Your Article</h2>
+
+<form (ngSubmit)="submitArticle()" enctype="multipart/form-data">
+
+<input type="text" placeholder="Name"
+[(ngModel)]="articleForm.name"
+name="name"
+required>
+
+<input type="email" placeholder="Email"
+[(ngModel)]="articleForm.email"
+name="email"
+required>
+
+<input type="text" placeholder="Phone Number"
+[(ngModel)]="articleForm.phone"
+name="phone"
+required>
+
+<!-- Journal Dropdown -->
+
+<select [(ngModel)]="articleForm.journal"
+name="journal"
+required>
+
+<option value="">Select Journal</option>
+
+<option *ngFor="let j of journals" [value]="j.name">
+{{j.name}}
+</option>
+
+</select>
+
+<input type="text" placeholder="Subject"
+[(ngModel)]="articleForm.subject"
+name="subject"
+required>
+
+<!-- File Upload -->
+
+<input type="file"
+(change)="onFileSelected($event)">
+
+<textarea placeholder="Message"
+[(ngModel)]="articleForm.message"
+name="message"></textarea>
+
+<button type="submit">Submit Article</button>
+
+</form>
+
+</div>

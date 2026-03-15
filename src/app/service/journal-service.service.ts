@@ -41,4 +41,7 @@ export class JournalServiceService {
   getCustomerQueries(){
   return this.http.get(this.baseUrl + "/customer/getQueries");
 }
+submitArticle(data:any){
+ return this.http.post(this.baseUrl+"/article/submitArticle",data);
+}
 }

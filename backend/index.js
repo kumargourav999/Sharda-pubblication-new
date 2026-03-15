@@ -4,6 +4,8 @@ const mongoose=require("mongoose");
 const adminRoutes=require(".//admin/controller/loginController");
 const journalRoutes = require(".//admin/controller/journalController");
 const customerQueryRoutes = require('.//admin/controller/customerQueryController');
+const articleRoutes = require(".//admin/controller/articleController");
+
 
 const createAdmin=require("./admin")
 //createAdmin();
@@ -18,6 +20,7 @@ mongoose.connect("mongodb+srv://kumar86gourav_db_user:9dN!Q0123@cluster0.5jcfhkj
 app.use("/api/admin",adminRoutes);
 app.use("/api/journals", journalRoutes);
 app.use("/api/customer", customerQueryRoutes);
+app.use("/api/article",articleRoutes);
 app.listen(5000,()=>{
     console.log("server is running on port 5000");
 })

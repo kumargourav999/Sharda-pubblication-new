@@ -1,0 +1,105 @@
+.article-container{
+width:90%;
+max-width:700px;
+margin:40px auto;
+background:#ffffff;
+padding:30px;
+border-radius:8px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+
+.article-container h2{
+text-align:center;
+color:#2f9898;
+margin-bottom:25px;
+font-weight:600;
+}
+
+/* Form layout */
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+/* Inputs */
+
+input,
+select,
+textarea{
+
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:5px;
+font-size:14px;
+transition:0.3s;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+outline:none;
+border-color:#2f9898;
+box-shadow:0 0 5px rgba(47,152,152,0.4);
+
+}
+
+/* File input */
+
+input[type="file"]{
+border:none;
+}
+
+/* Textarea */
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+/* Button */
+
+button{
+
+background:#2f9898;
+color:white;
+border:none;
+padding:12px;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+
+}
+
+button:hover{
+background:#247a7a;
+}
+
+/* Mobile responsive */
+
+@media(max-width:768px){
+
+.article-container{
+width:95%;
+padding:20px;
+}
+
+input,
+select,
+textarea{
+font-size:13px;
+padding:10px;
+}
+
+button{
+font-size:15px;
+}
+
+}
