@@ -17,6 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CustomerQueryComponent } from './customer-query/customer-query.component';
 import { AboutComponent} from './about/about.component';
 import { SubmitArticleComponent } from './submit-article/submit-article.component';
+import { CustomerArticleComponent } from './customer-article/customer-article.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SubmitArticleComponent } from './submit-article/submit-article.componen
     ContactComponent,
     CustomerQueryComponent,
     AboutComponent,
-    SubmitArticleComponent
+    SubmitArticleComponent,
+    CustomerArticleComponent
   ],
   imports: [
     BrowserModule,

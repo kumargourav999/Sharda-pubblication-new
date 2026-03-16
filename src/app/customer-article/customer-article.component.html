@@ -1,0 +1,34 @@
+<div class="article-container">
+
+<h2 style="color:#2f9898">Submitted Articles</h2>
+
+<div class="article-card" *ngFor="let a of articles">
+
+ <div class="info">
+  <p><strong>Name:</strong> {{a.name}}</p>
+  <p><strong>Email:</strong> {{a.email}}</p>
+  <p><strong>Journal:</strong> {{a.journal}}</p>
+  <p><strong>Subject:</strong> {{a.subject}}</p>
+ </div>
+
+ <div class="actions">
+
+  
+
+  <!-- Download -->
+  <i class="fa fa-download download-icon"
+     (click)="downloadFile(a.file)"
+     title="Download Article"></i>
+
+  <!-- Delete -->
+  <i class="fa fa-trash delete-icon"
+     (click)="deleteArticle(a._id)"
+     title="Delete Article"></i>
+
+
+
+ </div>
+
+</div>
+
+</div>

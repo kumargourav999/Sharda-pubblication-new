@@ -2,7 +2,7 @@
 // const router = express.Router();
 // const multer=require("multer");
 const Article = require("../models/articleModel.js");
-
+const fs =require("fs");
 // /* file storage */
 
 // const storage = multer.diskStorage({
@@ -109,4 +109,37 @@ router.get("/ok",(req,res)=>{
     res.json("dfghjjhgfghj");
 })
 
+
+router.get("/getArticles", async(req,res)=>{
+ try{
+
+  const articles = await Article.find().sort({createdAt:-1});
+
+  res.json(articles);
+
+ }catch(err){
+  res.status(500).json(err.message);
+ }
+});
+
+
+/* DELETE ARTICLE */
+
+router.delete("/deleteArticle/:id", async(req,res)=>{
+ try{
+
+  const article = await Article.findById(req.params.id);
+
+  if(article.file){
+   fs.unlinkSync("uploads/"+article.file);
+  }
+
+  await Article.findByIdAndDelete(req.params.id);
+
+  res.json({message:"Article deleted"});
+
+ }catch(err){
+  res.status(500).json(err.message);
+ }
+});
 module.exports = router;

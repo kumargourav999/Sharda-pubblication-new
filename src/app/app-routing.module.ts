@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CustomerQueryComponent } from './customer-query/customer-query.component';
 import { AboutComponent } from './about/about.component';
 import { SubmitArticleComponent } from './submit-article/submit-article.component';
+import { CustomerArticleComponent } from './customer-article/customer-article.component';
 import { AuthGuard} from './auth.guard';
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
       {path:'admindash', component: AdminDashboardComponent,canActivate:[AuthGuard]},
       {path:'contact',component:ContactComponent},
       {path:'customerQuery',component:CustomerQueryComponent},
-      {path:"submitArticle",component:SubmitArticleComponent}
+      {path:"submitArticle",component:SubmitArticleComponent},
+      {path:"customersArticle",component:CustomerArticleComponent}
 ];
 
 @NgModule({
