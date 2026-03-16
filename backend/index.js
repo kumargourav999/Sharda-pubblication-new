@@ -12,6 +12,7 @@ const createAdmin=require("./admin")
 const app=express();
 app.use(cors());
 app.use(express.json());
+app.use("/uploads",express.static("uploads"));
 //mongoose.connect("mongodb://localhost:27017/shardaPublication");
 app.use(cors());
 mongoose.connect("mongodb+srv://kumar86gourav_db_user:9dN!Q0123@cluster0.5jcfhkj.mongodb.net/sharda?retryWrites=true&w=majority&appName=Cluster0")
