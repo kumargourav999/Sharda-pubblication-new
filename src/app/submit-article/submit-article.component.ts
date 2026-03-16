@@ -10,7 +10,7 @@ export class SubmitArticleComponent implements OnInit {
 
   journals:any[] = [];
   selectedFile:any;
-
+selectedFileName:String=""
   articleForm:any = {
     name:'',
     email:'',
@@ -32,8 +32,10 @@ export class SubmitArticleComponent implements OnInit {
     });
   }
 
-  onFileSelected(event:any){
+  onFileChange(event:any){
     this.selectedFile = event.target.files[0];
+    const file=this.selectedFile;
+      this.selectedFileName = file.name;
   }
 
   submitArticle(){

@@ -103,3 +103,43 @@ font-size:15px;
 }
 
 }
+.file-upload{
+ text-align:center;
+ margin-top:20px;
+}
+
+.upload-icon{
+
+ display:inline-block;
+ padding:25px;
+ border:2px dashed #2f9898;
+ border-radius:10px;
+ cursor:pointer;
+ transition:0.3s;
+ color:#2f9898;
+}
+
+.upload-icon i{
+
+ font-size:40px;
+ margin-bottom:10px;
+ display:block;
+
+}
+
+.upload-icon:hover{
+
+ background:#2f9898;
+ color:white;
+ transform:scale(1.05);
+
+}
+
+.file-name{
+
+ display:block;
+ margin-top:10px;
+ color:#555;
+ font-size:14px;
+
+}
