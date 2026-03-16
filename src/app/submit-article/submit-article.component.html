@@ -38,10 +38,29 @@ required>
 name="subject"
 required>
 
-<!-- File Upload -->
+<!-- File Upload    -->
 
-<input type="file"
-(change)="onFileSelected($event)">
+<div class="file-upload">
+
+  <label for="fileInput" class="upload-icon">
+
+    <i class="fa fa-cloud-upload"></i>
+    <p>Upload Article</p>
+
+  </label>
+
+  <input 
+    type="file" 
+    id="fileInput"
+    (change)="onFileChange($event)"
+    hidden
+  >
+
+  <span *ngIf="selectedFileName" class="file-name">
+    {{selectedFileName}}
+  </span>
+
+</div>
 
 <textarea placeholder="Message"
 [(ngModel)]="articleForm.message"

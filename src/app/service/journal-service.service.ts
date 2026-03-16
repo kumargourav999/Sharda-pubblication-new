@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
 })
 export class JournalServiceService {
 
-    baseUrl=" https://sharda-pubblication-new-final.onrender.com/api"
-  // private baseUrl = "http://localhost:5000/api";
+   // baseUrl=" https://sharda-pubblication-new-final.onrender.com/api"
+  private baseUrl = "http://localhost:5000/api";
 
   constructor(private http: HttpClient) {}
 
@@ -43,5 +43,12 @@ export class JournalServiceService {
 }
 submitArticle(data:any){
  return this.http.post(this.baseUrl+"/article/submitArticle",data);
+}
+getArticles(){
+ return this.http.get(this.baseUrl + "/article/getArticles");
+}
+
+deleteArticle(id:any){
+ return this.http.delete(this.baseUrl + "/article/deleteArticle/" + id);
 }
 }
