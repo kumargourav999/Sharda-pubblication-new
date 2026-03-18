@@ -39,7 +39,7 @@ deleteArticle(id:any){
 
 downloadFile(file:any){
 
- window.open("https://sharda-pubblication-new-final.onrender.com/uploads/"+file);
+ window.open("https://sharda-pubblication-new-final.onrender.com/backend/uploads/"+file);
 
 }
 
