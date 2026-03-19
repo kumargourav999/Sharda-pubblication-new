@@ -4,24 +4,33 @@
 
     <!-- Logo -->
     <div class="logo">
-      <img src="ChatGPT Image Mar 12, 2026, 11_42_24 PM.jpeg" alt="Sharda Publication">
+       <img src="assets/WhatsApp Image 2026-03-12 at 8.58.15 PM.jpeg" alt="Sharda Publication">
     </div>
 
     <!-- Menu -->
     <ul class="menu" [class.active]="menuOpen">
-      <li><a routerLink="/" (click)=toggleMenu()>Home</a></li>
-    <li><a routerLink="/AboutUs" (click)=toggleMenu()>About Us</a></li>
-      <li><a routerLink="/journals" (click)=toggleMenu()>JOURNALS</a></li>
-      <li><a routerLink="/ojs-services" (click)=toggleMenu()>OJS SERVICES</a></li>
-      <li><a routerLink="/ph-support" (click)=toggleMenu()>PHD SUPPORT</a></li>
-      <li><a routerLink="/login" (click)=toggleMenu()>RESOURCES</a></li>
-      <li><a routerLink="/customerQuery" (click)=toggleMenu()>CONFERENCE</a></li> 
-       <li><a routerLink="/customersArticle" (click)=toggleMenu()>Customer Article</a></li> 
+      <li><a routerLink="/" (click)=toggleMenu($event)>HOME</a></li>
+    <li><a routerLink="/AboutUs" (click)=toggleMenu($event)>ABOUT US</a></li>
+      <li><a routerLink="/journals" (click)=toggleMenu($event)>JOURNALS</a></li>
+      <li><a routerLink="/ojs-services" value="servoce" (click)=toggleMenu($event) >SERVICES</a></li>
+      <!-- <ul [class.active]="menuOpenService">
+        <li >  <a routerLink="/journals"  (click)=toggleMenuService()>Research Publication </a></li>
+        <li>  <a routerLink="/journals"  (click)=toggleMenuService()>Research Publication </a></li>
+        <li>   <a routerLink="/journals" (click)=toggleMenuService()>Research Publication </a></li>
+        <li>  <a routerLink="/journals"  (click)=toggleMenuService()>Research Publication </a></li>
+        <li>  <a routerLink="/journals"  (click)=toggleMenuService()>Research Publication </a></li>
+        <li>  <a routerLink="/journals"  (click)=toggleMenuService()>Research Publication </a></li>
+
+      </ul> -->
+      <li><a routerLink="/ph-support" (click)=toggleMenu($event)>PHD SUPPORT</a></li>
+      <li><a routerLink="/login" (click)=toggleMenu($event)>RESOURCES</a></li>
+      <li><a routerLink="/customerQuery" (click)=toggleMenu($event)>CONFERENCE</a></li> 
+       <li><a routerLink="/customersArticle" (click)=toggleMenu($event)>Customer Article</a></li> 
      
   </ul>
 
     <!-- Hamburger -->
-    <div class="hamburger" (click)="toggleMenu()">
+    <div class="hamburger" (click)="toggleMenu($event)">
       <span></span>
       <span></span>
       <span></span>
