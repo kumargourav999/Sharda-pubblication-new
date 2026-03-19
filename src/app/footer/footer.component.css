@@ -1,9 +1,10 @@
 .footer{
-  background:linear-gradient(to bottom, black, #FFE098);
+  background: linear-gradient(to bottom, #2f9898, #8bb8b8);;
   color:#fff;
   padding-top:40px;
   margin-top:60px;
 }
+
 .footer-container{
   display:flex;
   flex-wrap:wrap;
