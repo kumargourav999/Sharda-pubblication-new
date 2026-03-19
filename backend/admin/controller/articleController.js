@@ -51,6 +51,7 @@ const fs =require("fs");
 const express = require("express");
 const router = express.Router();
 const multer = require("multer");
+const path=require("path");
 //const Document = require("../models/document");
 
 const storage = multer.diskStorage({
@@ -130,9 +131,15 @@ router.delete("/deleteArticle/:id", async(req,res)=>{
 
   const article = await Article.findById(req.params.id);
 
-  if(article.file){
-   fs.unlinkSync("uploads/"+article.file);
-  }
+  const filePath = path.join(__dirname, "../../uploads/", article.file);
+
+    // ✅ Check if file exists
+    if (fs.existsSync(filePath)) {
+      fs.unlinkSync(filePath);
+    } else {
+      console.log("File not found, skipping delete");
+    }
+
 
   await Article.findByIdAndDelete(req.params.id);
 
