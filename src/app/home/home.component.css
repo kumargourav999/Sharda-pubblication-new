@@ -6,7 +6,7 @@
   text-align:center;
   color:white;
 
- background-color:  #a1f0f0;
+ background:linear-gradient(to bottom, black, #FFE098);
  
   position: relative;
 }
@@ -38,7 +38,7 @@
 
 .primary-btn{
   background:white;
-  color:#74b3b3;
+  color:black;
   border:none;
   padding:12px 28px;
   border-radius:25px;
