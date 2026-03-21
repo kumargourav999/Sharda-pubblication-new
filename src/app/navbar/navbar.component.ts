@@ -9,10 +9,15 @@ export class NavbarComponent {
 
 constructor(private router: Router){}
  menuOpen = false;
-
+menuOpenService=false;
   toggleMenu() {
+   
     this.menuOpen = !this.menuOpen;
   }
+   toggleMenuService() {
+    this.menuOpenService = !this.menuOpenService;
+  }
+
   
 goToContact(){
   this.router.navigate(['/contact']);

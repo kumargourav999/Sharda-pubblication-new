@@ -9,6 +9,7 @@ journal:String,
 subject:String,
 message:String,
 file:String,
+public_id:String,
 createdAt:{
  type:Date,
  default:Date.now
