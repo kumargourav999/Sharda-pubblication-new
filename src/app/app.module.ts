@@ -18,6 +18,8 @@ import { CustomerQueryComponent } from './customer-query/customer-query.componen
 import { AboutComponent} from './about/about.component';
 import { SubmitArticleComponent } from './submit-article/submit-article.component';
 import { CustomerArticleComponent } from './customer-article/customer-article.component';
+import { ResearchPulicationComponent } from './research-pulication/research-pulication.component';
+import { DOIComponent } from './doi/doi.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { CustomerArticleComponent } from './customer-article/customer-article.co
     CustomerQueryComponent,
     AboutComponent,
     SubmitArticleComponent,
-    CustomerArticleComponent
+    CustomerArticleComponent,
+    ResearchPulicationComponent,
+    DOIComponent
   ],
   imports: [
     BrowserModule,

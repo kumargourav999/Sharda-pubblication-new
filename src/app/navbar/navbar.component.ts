@@ -17,6 +17,19 @@ menuOpenService=false;
    toggleMenuService() {
     this.menuOpenService = !this.menuOpenService;
   }
+  serviceOpen = false;
+
+toggleDropdown(event:any){
+  event.stopPropagation(); // prevent closing
+  this.serviceOpen = !this.serviceOpen;
+}
+nav(){
+ this.router.navigate(["research-pubication"]);
+}
+closeAll(){
+  this.serviceOpen = false;
+  this.menuOpen = false; // close hamburger also
+}
 
   
 goToContact(){

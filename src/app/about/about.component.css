@@ -81,6 +81,7 @@ margin:auto;
 .service-card{
 background:white;
 padding:25px;
+border-left: 5px solid #2f9898;
 text-align:center;
 border-radius:8px;
 box-shadow:0 2px 10px rgba(0,0,0,0.1);

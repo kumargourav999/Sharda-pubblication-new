@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { SubmitArticleComponent } from './submit-article/submit-article.component';
 import { CustomerArticleComponent } from './customer-article/customer-article.component';
 import { AuthGuard} from './auth.guard';
+import { ResearchPulicationComponent } from './research-pulication/research-pulication.component';
+import { DOIComponent } from './doi/doi.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {path:'AboutUs',component:AboutComponent},
@@ -19,7 +21,9 @@ const routes: Routes = [
       {path:'contact',component:ContactComponent},
       {path:'customerQuery',component:CustomerQueryComponent},
       {path:"submitArticle",component:SubmitArticleComponent},
-      {path:"customersArticle",component:CustomerArticleComponent}
+      {path:"customersArticle",component:CustomerArticleComponent},
+       {path:"research-pubication",component:ResearchPulicationComponent},
+         {path:"D-O-I",component:DOIComponent},
 ];
 
 @NgModule({

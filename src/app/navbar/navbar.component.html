@@ -12,16 +12,22 @@
       <li><a routerLink="/" (click)=toggleMenu()>HOME</a></li>
     <li><a routerLink="/AboutUs" (click)=toggleMenu()>ABOUT US</a></li>
       <li><a routerLink="/journals" (click)=toggleMenu()>JOURNALS</a></li>
-      <li><a routerLink="/ojs-services" (click)=toggleMenu() >SERVICES</a></li>
-      <!-- <ul [class.active]="menuOpenService">
-        <li >  <a routerLink="/journals"  (click)=toggleMenuService()>Research Publication </a></li>
-        <li>  <a routerLink="/journals"  (click)=toggleMenuService()>Research Publication </a></li>
-        <li>   <a routerLink="/journals" (click)=toggleMenuService()>Research Publication </a></li>
-        <li>  <a routerLink="/journals"  (click)=toggleMenuService()>Research Publication </a></li>
-        <li>  <a routerLink="/journals"  (click)=toggleMenuService()>Research Publication </a></li>
-        <li>  <a routerLink="/journals"  (click)=toggleMenuService()>Research Publication </a></li>
+     <li class="dropdown" (click)="toggleDropdown($event)">
 
-      </ul> -->
+  <a> SERVICES <i class="fa fa-chevron-down"></i> </a>
+
+  <ul class="dropdown-menu" [class.show]="serviceOpen">
+
+    <li><a  (click)="nav()">RESEARCH PUBLICATION</a></li>
+    <li><a routerLink="/D-O-I" (click)="closeAll()">DOI</a></li>
+    <li><a routerLink="/service3" (click)="closeAll()">Service 3</a></li>
+    <li><a routerLink="/service4" (click)="closeAll()">Service 4</a></li>
+    <li><a routerLink="/service5" (click)="closeAll()">Service 5</a></li>
+
+  </ul>
+
+</li>
+     
       <li><a routerLink="/ph-support" (click)=toggleMenu()>PHD SUPPORT</a></li>
       <li><a routerLink="/login" (click)=toggleMenu()>RESOURCES</a></li>
       <li><a routerLink="/customerQuery" (click)=toggleMenu()>CONFERENCE</a></li> 
