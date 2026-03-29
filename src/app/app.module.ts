@@ -20,6 +20,8 @@ import { SubmitArticleComponent } from './submit-article/submit-article.componen
 import { CustomerArticleComponent } from './customer-article/customer-article.component';
 import { ResearchPulicationComponent } from './research-pulication/research-pulication.component';
 import { DOIComponent } from './doi/doi.component';
+import { OJSComponent } from './ojs/ojs.component';
+import { CopyeditingComponent } from './copyediting/copyediting.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { DOIComponent } from './doi/doi.component';
     SubmitArticleComponent,
     CustomerArticleComponent,
     ResearchPulicationComponent,
-    DOIComponent
+    DOIComponent,
+    OJSComponent,
+    CopyeditingComponent
   ],
   imports:[
     BrowserModule,

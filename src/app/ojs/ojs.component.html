@@ -1,0 +1,147 @@
+<div class="ojs-container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>OJS Services</h1>
+    <p>
+      Elevate your academic journal with modern, scalable, and professional OJS solutions.
+    </p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="section">
+    <p>
+      We provide complete Open Journal Systems (OJS) solutions for universities,
+      research institutions, and scholarly publishers.
+    </p>
+  </div>
+
+  <!-- CORE SERVICES -->
+  <div class="section">
+    <h2>Our OJS Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>🎨 Design & Development</h3>
+        <p>Custom-built, responsive, SEO-optimized journal platforms.</p>
+      </div>
+
+      <div class="card">
+        <h3>⬆ Journal Upgrades</h3>
+        <p>Secure migration to OJS 3.x with enhanced features.</p>
+      </div>
+
+      <div class="card">
+        <h3>🛠 Ongoing Support</h3>
+        <p>Maintenance & technical support for smooth operations.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DESIGN SECTION -->
+  <div class="section highlight">
+    <h2>OJS Website Design & Development</h2>
+
+    <ul class="list">
+      <li>Seamless submission & peer-review workflow</li>
+      <li>Professional article publishing layout</li>
+      <li>Fully responsive design</li>
+      <li>SEO optimized for discoverability</li>
+      <li>Custom branding for your journal</li>
+    </ul>
+
+  </div>
+
+  <!-- UPGRADE -->
+  <div class="section">
+    <h2>OJS Website Upgrade Service</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <p>Secure migration of articles & users</p>
+      </div>
+
+      <div class="card">
+        <p>Improved workflows & features</p>
+      </div>
+
+      <div class="card">
+        <p>Faster performance & speed</p>
+      </div>
+
+      <div class="card">
+        <p>Latest security implementation</p>
+      </div>
+
+      <div class="card">
+        <p>Minimal downtime during upgrade</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SUPPORT -->
+  <div class="section highlight">
+    <h2>Ongoing Support & Maintenance</h2>
+    <p>
+      Our dedicated team ensures your journal remains secure,
+      updated, and fully functional with continuous monitoring.
+    </p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+
+      <div class="faq-item" (click)="toggleFAQ(0)">
+        <h4>What is OJS?</h4>
+        <p *ngIf="faqOpen[0]">
+          OJS is an open-source platform for managing and publishing scholarly journals.
+        </p>
+      </div>
+
+      <div class="faq-item" (click)="toggleFAQ(1)">
+        <h4>What does OJS do?</h4>
+        <p *ngIf="faqOpen[1]">
+          It handles submission, peer review, editorial workflow, and publishing.
+        </p>
+      </div>
+
+      <div class="faq-item" (click)="toggleFAQ(2)">
+        <h4>How can authors submit articles?</h4>
+        <p *ngIf="faqOpen[2]">
+          Authors submit directly through the OJS portal step-by-step.
+        </p>
+      </div>
+
+      <div class="faq-item" (click)="toggleFAQ(3)">
+        <h4>Latest OJS version?</h4>
+        <p *ngIf="faqOpen[3]">
+          Updated regularly by PKP with new features and security updates.
+        </p>
+      </div>
+
+      <div class="faq-item" (click)="toggleFAQ(4)">
+        <h4>What is a journal website?</h4>
+        <p *ngIf="faqOpen[4]">
+          A digital platform for publishing and managing scholarly content globally.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Build Your Journal Platform Today</h2>
+    <p>Launch a professional OJS journal with us.</p>
+    <button routerLink="/contact">Get Started</button>
+  </div>
+
+</div>

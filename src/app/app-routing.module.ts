@@ -12,6 +12,8 @@ import { CustomerArticleComponent } from './customer-article/customer-article.co
 import { AuthGuard} from './auth.guard';
 import { ResearchPulicationComponent } from './research-pulication/research-pulication.component';
 import { DOIComponent } from './doi/doi.component';
+import { OJSComponent } from './ojs/ojs.component';
+import { CopyeditingComponent } from './copyediting/copyediting.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {path:'AboutUs',component:AboutComponent},
@@ -24,6 +26,8 @@ const routes: Routes = [
       {path:"customersArticle",component:CustomerArticleComponent},
        {path:"research-pubication",component:ResearchPulicationComponent},
         {path:"D-O-I",component:DOIComponent},
+        {path:"O-J-S",component:OJSComponent},
+        {path:"copyediting-formating",component:CopyeditingComponent}
 ];
 
 @NgModule({
