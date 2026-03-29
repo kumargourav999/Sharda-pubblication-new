@@ -23,7 +23,7 @@ const routes: Routes = [
       {path:"submitArticle",component:SubmitArticleComponent},
       {path:"customersArticle",component:CustomerArticleComponent},
        {path:"research-pubication",component:ResearchPulicationComponent},
-         {path:"D-O-I",component:DOIComponent},
+        {path:"D-O-I",component:DOIComponent},
 ];
 
 @NgModule({

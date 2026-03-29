@@ -7,7 +7,7 @@ describe('ResearchPulicationComponent', () => {
   let fixture: ComponentFixture<ResearchPulicationComponent>;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
+   TestBed.configureTestingModule({
       declarations: [ResearchPulicationComponent]
     });
     fixture = TestBed.createComponent(ResearchPulicationComponent);

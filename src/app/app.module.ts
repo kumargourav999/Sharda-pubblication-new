@@ -40,7 +40,7 @@ import { DOIComponent } from './doi/doi.component';
     ResearchPulicationComponent,
     DOIComponent
   ],
-  imports: [
+  imports:[
     BrowserModule,
     FormsModule,
     HttpClientModule,

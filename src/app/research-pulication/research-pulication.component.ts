@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./research-pulication.component.css']
 })
 export class ResearchPulicationComponent {
-
 }

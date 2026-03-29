@@ -10,7 +10,7 @@ describe('DOIComponent', () => {
     TestBed.configureTestingModule({
       declarations: [DOIComponent]
     });
-    fixture = TestBed.createComponent(DOIComponent);
+   fixture = TestBed.createComponent(DOIComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
