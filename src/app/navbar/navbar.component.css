@@ -46,10 +46,6 @@
   transition: 0.3s;
 }
 
-.dropdown-menu li a:hover {
-  background: #2f9898;
-  color: white;
-}
 
 /* Desktop hover */
 @media (min-width: 768px) {
@@ -90,7 +86,8 @@
 }
 
 .menu li a:hover{
-  color:#3a7bfd;
+  color:#219494;
+ 
 }
 
 /* Hamburger */

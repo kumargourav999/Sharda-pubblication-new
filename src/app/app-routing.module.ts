@@ -14,6 +14,7 @@ import { ResearchPulicationComponent } from './research-pulication/research-puli
 import { DOIComponent } from './doi/doi.component';
 import { OJSComponent } from './ojs/ojs.component';
 import { CopyeditingComponent } from './copyediting/copyediting.component';
+import { ResearchArticeComponent } from './research-artice/research-artice.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {path:'AboutUs',component:AboutComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
        {path:"research-pubication",component:ResearchPulicationComponent},
         {path:"D-O-I",component:DOIComponent},
         {path:"O-J-S",component:OJSComponent},
-        {path:"copyediting-formating",component:CopyeditingComponent}
+        {path:"copyediting-formating",component:CopyeditingComponent},
+          {path:"research-article",component:ResearchArticeComponent},
 ];
 
 @NgModule({

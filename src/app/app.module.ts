@@ -22,6 +22,7 @@ import { ResearchPulicationComponent } from './research-pulication/research-puli
 import { DOIComponent } from './doi/doi.component';
 import { OJSComponent } from './ojs/ojs.component';
 import { CopyeditingComponent } from './copyediting/copyediting.component';
+import { ResearchArticeComponent } from './research-artice/research-artice.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CopyeditingComponent } from './copyediting/copyediting.component';
     ResearchPulicationComponent,
     DOIComponent,
     OJSComponent,
-    CopyeditingComponent
+    CopyeditingComponent,
+    ResearchArticeComponent
   ],
   imports:[
     BrowserModule,
