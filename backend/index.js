@@ -8,7 +8,7 @@ const articleRoutes = require(".//admin/controller/articleController");
 
 
 const createAdmin=require("./admin")
-//createAdmin();
+createAdmin();
 const app=express();
 app.use(cors());
 app.use(express.json());
