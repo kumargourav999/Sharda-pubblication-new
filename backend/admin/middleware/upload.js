@@ -7,8 +7,8 @@ const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: "sharda-publication",
-    resource_type: "raw", // ✅ for PDF
-    format: async (req, file) => "pdf",
+    resource_type: "auto", // ✅ KEY FIX
+    type: "upload",
     public_id: (req, file) => Date.now() + "-" + file.originalname,
   },
 });

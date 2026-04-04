@@ -37,10 +37,12 @@ deleteArticle(id:any){
 
 }
 
-downloadFile(file:any){
-
- window.open("https://sharda-pubblication-new-final.onrender.com/backend/uploads/"+file);
-
+// downloadFile(file: any){
+//   const downloadUrl = file.replace("/upload/", "/upload/fl_attachment/");
+//   window.open(downloadUrl, '_blank');
+// }
+downloadFile(file: any){
+  window.open(file, '_blank');
 }
 
 
