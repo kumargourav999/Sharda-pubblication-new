@@ -15,8 +15,12 @@ import { DOIComponent } from './doi/doi.component';
 import { OJSComponent } from './ojs/ojs.component';
 import { CopyeditingComponent } from './copyediting/copyediting.component';
 import { ResearchArticeComponent } from './research-artice/research-artice.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ParaphesingComponent } from './paraphesing/paraphesing.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  {path:'navbar',component:NavbarComponent},
+  {path:'paraphrasing',component:ParaphesingComponent},
   {path:'AboutUs',component:AboutComponent},
      { path: 'journals', component: JournalsComponent },
      {path:'login', component: AdminLoginComponent},

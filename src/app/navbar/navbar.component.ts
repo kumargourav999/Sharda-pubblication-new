@@ -1,13 +1,27 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
 
-constructor(private router: Router){}
+constructor(private router: Router){
+   this.admin = localStorage.getItem('adminToken');
+}
+admin:any;
+ ngOnInit() {
+    this.loadRole();
+
+    // 👇 This handles updates when localStorage changes (same tab manual refresh workaround)
+     window.addEventListener('roleChanged', () => {
+      this.loadRole();
+    });
+  }
+  loadRole(){
+     this.admin = localStorage.getItem('adminToken');
+  }
  menuOpen = false;
 menuOpenService=false;
   toggleMenu() {

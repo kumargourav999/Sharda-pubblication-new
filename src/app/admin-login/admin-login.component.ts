@@ -48,7 +48,7 @@ this.http.post<any>(this.baseUrl,{
     alert("Login successful");
    
      localStorage.setItem("adminToken", res.token);
-
+        window.dispatchEvent(new Event('roleChanged'));
     this.router.navigate(["/admindash"])
   },
 

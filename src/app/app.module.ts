@@ -23,6 +23,7 @@ import { DOIComponent } from './doi/doi.component';
 import { OJSComponent } from './ojs/ojs.component';
 import { CopyeditingComponent } from './copyediting/copyediting.component';
 import { ResearchArticeComponent } from './research-artice/research-artice.component';
+import { ParaphesingComponent } from './paraphesing/paraphesing.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ResearchArticeComponent } from './research-artice/research-artice.compo
     DOIComponent,
     OJSComponent,
     CopyeditingComponent,
-    ResearchArticeComponent
+    ResearchArticeComponent,
+    ParaphesingComponent
   ],
   imports:[
     BrowserModule,

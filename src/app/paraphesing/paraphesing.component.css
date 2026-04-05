@@ -1,0 +1,102 @@
+.hero {
+    border-left: 31px solid #1c6d6d;
+    border-bottom: 10px solid #2fb0b0;
+  color: #1c6d6d;
+padding:20px 20px;
+text-align:center;
+}
+
+/* Intro Section */
+.intro-section {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  gap: 40px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-text h2 {
+  color: #2f9898;
+  margin-bottom: 15px;
+}
+
+.intro-image {
+  flex: 1;
+  text-align: center;
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Sections */
+.features, .benefits {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.features {
+  background: #f5fafa;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Originality */
+.originality {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+/* Process */
+.process {
+  background: #f5fafa;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.step {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+  }
+}

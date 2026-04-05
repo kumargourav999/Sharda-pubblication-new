@@ -9,10 +9,10 @@
 
     <!-- Menu -->
     <ul class="menu" [class.active]="menuOpen">
-      <li><a routerLink="/" (click)=toggleMenu()>HOME</a></li>
-    <li><a routerLink="/AboutUs" (click)=toggleMenu()>ABOUT US</a></li>
-      <li><a routerLink="/journals" (click)=toggleMenu()>JOURNALS</a></li>
-     <li class="dropdown" (click)="toggleDropdown($event)">
+      <li *ngIf="!admin"><a routerLink="/" (click)=toggleMenu()>HOME</a></li>
+    <li  *ngIf="!admin"><a routerLink="/AboutUs" (click)=toggleMenu()>ABOUT US</a></li>
+      <li  *ngIf="!admin"><a routerLink="/journals" (click)=toggleMenu()>JOURNALS</a></li>
+     <li  *ngIf="!admin" class="dropdown" (click)="toggleDropdown($event)">
 
   <a> SERVICES <i class="fa fa-chevron-down"></i> </a>
 
@@ -23,15 +23,18 @@
     <li><a routerLink="/O-J-S" (click)="closeAll()">OJS SERVICES</a></li>
     <li><a routerLink="/copyediting-formating" (click)="closeAll()">COPYEDITING & FORMATING</a></li>
     <li><a routerLink="/research-article" (click)="closeAll()">RESEARCH ARTICLE WRITING</a></li>
+     <li><a routerLink="/paraphrasing" (click)="closeAll()">PARAPHRASING SERVICES</a></li>
+   
 
   </ul>
 
 </li>
      
-      <li><a routerLink="/ph-support" (click)=toggleMenu()>PHD SUPPORT</a></li>
-      <li><a routerLink="/login" (click)=toggleMenu()>RESOURCES</a></li>
-      <li><a routerLink="/customerQuery" (click)=toggleMenu()>CONFERENCE</a></li> 
-       <li><a routerLink="/customersArticle" (click)=toggleMenu()>Customer Article</a></li> 
+      <!-- <li><a routerLink="/ph-support" (click)=toggleMenu()>PHD SUPPORT</a></li>
+      <li><a routerLink="/login" (click)=toggleMenu()>RESOURCES</a></li> -->
+      <li *ngIf="admin"><a routerLink="/customerQuery" (click)=toggleMenu()>CUSTOMER QUERIES</a></li> 
+       <li *ngIf="admin"><a routerLink="/customersArticle" (click)=toggleMenu()>CUSTOMER ARTICLES</a></li> 
+        <li *ngIf="admin"><a routerLink="/admindash" (click)=toggleMenu()>ADD JOURNALS</a></li> 
      
   </ul>
 
