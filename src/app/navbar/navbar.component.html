@@ -9,10 +9,10 @@
 
     <!-- Menu -->
     <ul class="menu" [class.active]="menuOpen">
-      <li *ngIf="!admin"><a routerLink="/" (click)=toggleMenu()>HOME</a></li>
-    <li  *ngIf="!admin"><a routerLink="/AboutUs" (click)=toggleMenu()>ABOUT US</a></li>
-      <li  *ngIf="!admin"><a routerLink="/journals" (click)=toggleMenu()>JOURNALS</a></li>
-     <li  *ngIf="!admin" class="dropdown" (click)="toggleDropdown($event)">
+      <li><a routerLink="/" (click)=toggleMenu()>HOME</a></li>
+    <li  ><a routerLink="/AboutUs" (click)=toggleMenu()>ABOUT US</a></li>
+      <li ><a routerLink="/journals" (click)=toggleMenu()>JOURNALS</a></li>
+     <li  class="dropdown" (click)="toggleDropdown($event)">
 
   <a> SERVICES <i class="fa fa-chevron-down"></i> </a>
 
