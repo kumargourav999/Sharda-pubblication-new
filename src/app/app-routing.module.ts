@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:'navbar',component:NavbarComponent},
   {path:'paraphrasing',component:ParaphesingComponent},
   {path:'AboutUs',component:AboutComponent},
-     { path: 'journals', component: JournalsComponent },
+    { path: 'journals', component: JournalsComponent },
      {path:'login', component: AdminLoginComponent},
       {path:'admindash', component: AdminDashboardComponent,canActivate:[AuthGuard]},
       {path:'contact',component:ContactComponent},

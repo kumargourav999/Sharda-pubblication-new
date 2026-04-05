@@ -19,7 +19,7 @@ admin:any;
       this.loadRole();
     });
   }
-  loadRole(){
+loadRole(){
      this.admin = localStorage.getItem('adminToken');
   }
  menuOpen = false;

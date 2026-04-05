@@ -43,7 +43,7 @@ import { ParaphesingComponent } from './paraphesing/paraphesing.component';
     CustomerArticleComponent,
     ResearchPulicationComponent,
     DOIComponent,
-    OJSComponent,
+     OJSComponent,
     CopyeditingComponent,
     ResearchArticeComponent,
     ParaphesingComponent
