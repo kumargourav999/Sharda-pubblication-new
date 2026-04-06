@@ -17,6 +17,7 @@ import { CopyeditingComponent } from './copyediting/copyediting.component';
 import { ResearchArticeComponent } from './research-artice/research-artice.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ParaphesingComponent } from './paraphesing/paraphesing.component';
+import { RefundComponent } from './refund/refund.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {path:'navbar',component:NavbarComponent},
@@ -34,10 +35,13 @@ const routes: Routes = [
         {path:"O-J-S",component:OJSComponent},
         {path:"copyediting-formating",component:CopyeditingComponent},
           {path:"research-article",component:ResearchArticeComponent},
+           {path:"refund-policy",component:RefundComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+  scrollPositionRestoration: 'enabled'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

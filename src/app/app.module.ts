@@ -24,6 +24,7 @@ import { OJSComponent } from './ojs/ojs.component';
 import { CopyeditingComponent } from './copyediting/copyediting.component';
 import { ResearchArticeComponent } from './research-artice/research-artice.component';
 import { ParaphesingComponent } from './paraphesing/paraphesing.component';
+import { RefundComponent } from './refund/refund.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ParaphesingComponent } from './paraphesing/paraphesing.component';
      OJSComponent,
     CopyeditingComponent,
     ResearchArticeComponent,
-    ParaphesingComponent
+    ParaphesingComponent,
+    RefundComponent
   ],
   imports:[
     BrowserModule,
