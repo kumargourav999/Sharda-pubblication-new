@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { JournalServiceService } from '../service/journal-service.service';
+import { ViewChild } from '@angular/core';
+import { PopupComponent } from '../popup/popup.component';
+
 
 @Component({
   selector: 'app-submit-article',
@@ -7,7 +10,7 @@ import { JournalServiceService } from '../service/journal-service.service';
   styleUrls: ['./submit-article.component.css']
 })
 export class SubmitArticleComponent implements OnInit {
-
+@ViewChild('popup') popup!: PopupComponent;
   journals:any[] = [];
   selectedFile:any;
 selectedFileName:String=""
@@ -52,8 +55,12 @@ selectedFileName:String=""
 
     this.service.submitArticle(formData)
     .subscribe(res=>{
-      alert("Article submitted successfully");
-    });
+     this.popup.show("Submitted successfully", "success");
+    },
+    err=>{
+       this.popup.show("Something went wrong", "error");
+    }
+  );
 
   }
 

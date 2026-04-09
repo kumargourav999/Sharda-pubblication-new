@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ViewChild } from '@angular/core';
+import { PopupComponent } from '../popup/popup.component';
+
 
 @Component({
   selector: 'app-admin-login',
@@ -10,7 +13,7 @@ import { Router } from '@angular/router';
 export class AdminLoginComponent {
 email='';
 password='';
-
+@ViewChild('popup') popup!: PopupComponent;
 constructor(private http:HttpClient,private router:Router){}
    baseUrl=" https://sharda-pubblication-new-final.onrender.com/api/admin/login"
    // baseUrl='http://localhost:5000/api/admin/login'
@@ -44,15 +47,15 @@ this.http.post<any>(this.baseUrl,{
 
   next:(res)=>{
    
-    alert("Login successful");
    
+    this.popup.show("Logged successfully", "success");
     localStorage.setItem("adminToken", res.token);
         window.dispatchEvent(new Event('roleChanged'));
     this.router.navigate(["/admindash"])
   },
 
   error:(err)=>{
-    alert("Invalid login");
+    this.popup.show("Wrong email or password", "error");
   }
 
 });

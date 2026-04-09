@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { JournalServiceService } from '../service/journal-service.service';
+import { ViewChild } from '@angular/core';
+import { PopupComponent } from '../popup/popup.component';
+
+
 @Component({
   selector: 'app-admin-dashboard',
   templateUrl: './admin-dashboard.component.html',
@@ -7,7 +11,7 @@ import { JournalServiceService } from '../service/journal-service.service';
 })
 export class AdminDashboardComponent {
 constructor(private journalService:JournalServiceService){}
-
+@ViewChild('popup') popup!: PopupComponent;
 showForm=false;
 editMode=false;
 editId:any=null;
@@ -40,10 +44,16 @@ if(confirm("Delete this journal?")){
 this.journalService.deleteJournal(id)
 .subscribe((res:any)=>{
 
-alert(res.message);
+
+ this.popup.show("Deleted successfully", "success");
+
 this.getJournals();
 
-});
+},
+err=>{
+ this.popup.show("Something went wrong", "error");
+}
+);
 
 }
 
@@ -68,19 +78,23 @@ if(this.editMode){
 this.journalService.updateJournal(this.editId,this.journal)
 .subscribe((res:any)=>{
 
-alert(res.message);
 
+this.popup.show(res.message, "success");
 this.editMode=false;
 this.journal={};
 
 this.getJournals();
 
-});
+},
+err=>{
+  this.popup.show("Something went wrong", "error");
+}
+);
 }else{
 this.journalService.addJournal(this.journal)
 .subscribe((res:any)=>{
 
- alert(res.message);
+this.popup.show(res.message, "success");
 
  this.journal={};
 
@@ -88,7 +102,11 @@ this.journalService.addJournal(this.journal)
 
  this.showForm=false;
 
-});
+},
+err=>{
+ this.popup.show("Something went wrong", "error");
+}
+);
 }
 }
 
