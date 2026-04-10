@@ -18,6 +18,9 @@ import { ResearchArticeComponent } from './research-artice/research-artice.compo
 import { NavbarComponent } from './navbar/navbar.component';
 import { ParaphesingComponent } from './paraphesing/paraphesing.component';
 import { RefundComponent } from './refund/refund.component';
+import { ThesisWritingComponent } from './thesis-writing/thesis-writing.component';
+import { DessertationWritingComponent } from './dessertation-writing/dessertation-writing.component';
+import { ThesisEditingComponent } from './thesis-editing/thesis-editing.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {path:'navbar',component:NavbarComponent},
@@ -36,6 +39,9 @@ const routes: Routes = [
         {path:"copyediting-formating",component:CopyeditingComponent},
           {path:"research-article",component:ResearchArticeComponent},
            {path:"refund-policy",component:RefundComponent},
+           {path:"thesis-writing",component:ThesisWritingComponent},
+           {path:"dessertation-writing",component:DessertationWritingComponent},
+           {path:"thesis-editing",component:ThesisEditingComponent}
 ];
 
 @NgModule({

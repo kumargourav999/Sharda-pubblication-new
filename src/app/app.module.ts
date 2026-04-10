@@ -26,6 +26,9 @@ import { ResearchArticeComponent } from './research-artice/research-artice.compo
 import { ParaphesingComponent } from './paraphesing/paraphesing.component';
 import { RefundComponent } from './refund/refund.component';
 import { PopupComponent } from './popup/popup.component';
+import { ThesisWritingComponent } from './thesis-writing/thesis-writing.component';
+import { DessertationWritingComponent } from './dessertation-writing/dessertation-writing.component';
+import { ThesisEditingComponent } from './thesis-editing/thesis-editing.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { PopupComponent } from './popup/popup.component';
     ResearchArticeComponent,
     ParaphesingComponent,
     RefundComponent,
-    PopupComponent
+    PopupComponent,
+    ThesisWritingComponent,
+    DessertationWritingComponent,
+    ThesisEditingComponent
   ],
   imports:[
     BrowserModule,

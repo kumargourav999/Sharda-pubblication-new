@@ -32,11 +32,16 @@ menuOpenService=false;
     this.menuOpenService = !this.menuOpenService;
   }
   serviceOpen = false;
-
+  PHDOpen=false;
 toggleDropdown(event:any){
   event.stopPropagation(); // prevent closing
   this.serviceOpen = !this.serviceOpen;
 }
+toggleDropdown1(event:any){
+  event.stopPropagation(); // prevent closing
+  this.PHDOpen = !this.PHDOpen;
+}
+
 nav(){
  this.router.navigate(["research-pubication"]);
 }
@@ -44,6 +49,11 @@ closeAll(){
   this.serviceOpen = false;
   this.menuOpen = false; // close hamburger also
 }
+closeAll1(){
+  this.PHDOpen = false;
+  this.menuOpen = false; // close hamburger also
+}
+
 
   
 goToContact(){
