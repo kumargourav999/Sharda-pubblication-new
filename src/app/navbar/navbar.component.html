@@ -19,7 +19,7 @@
 
   <ul class="dropdown-menu" [class.show]="serviceOpen">
 
-    <li><a  (click)="nav()">RESEARCH PUBLICATION</a></li>
+    <li><a  routerLink="/research-pubication" (click)="closeAll()">RESEARCH PUBLICATION</a></li>
     <li><a routerLink="/D-O-I" (click)="closeAll()">DOI SERVICES</a></li>
     <li><a routerLink="/O-J-S" (click)="closeAll()">OJS SERVICES</a></li>
     <li><a routerLink="/copyediting-formating" (click)="closeAll()">COPYEDITING & FORMATING</a></li>
@@ -32,7 +32,7 @@
 </li>
  <li  class="dropdown" (click)="toggleDropdown1($event)">
 
-  <a> PHD SUPPORT <i class="fa fa-chevron-down"></i> </a>
+  <a > PHD SUPPORT <i class="fa fa-chevron-down"></i> </a>
 
   <ul class="dropdown-menu" [class.show]="PHDOpen">
 

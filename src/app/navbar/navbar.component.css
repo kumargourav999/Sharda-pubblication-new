@@ -13,10 +13,13 @@
 .dropdown {
   position: relative;
 }
+.dropdown1 {
+  position: relative;
+}
 
 /* Dropdown menu */
 .dropdown-menu {
-  position: absolute;
+  position: relative;
   top: 100%;
   left: 0;
   background: #fff;
@@ -154,7 +157,7 @@
   transform:translateX(100%);
   transition:transform 0.3s ease;
 
-  z-index:999;
+ z-index:  9999;
 }
 
 .menu.active{
